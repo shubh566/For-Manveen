@@ -55,6 +55,26 @@ h1 {
 }
 
 .drive {
+    .usphoto {
+    width: 260px;
+    margin-top: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.hearts::before {
+    content: "💗 💗 💗 💗 💗 💗 💗 💗 💗 💗";
+    font-size: 30px;
+    display: block;
+    margin: 15px 0;
+    animation: floatHearts 2s infinite;
+}
+
+@keyframes floatHearts {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
