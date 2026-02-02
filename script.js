@@ -8,12 +8,9 @@ noBtn.addEventListener("mouseover", () => {
 });
 
 yesBtn.addEventListener("click", () => {
+    document.getElementById("main").classList.add("hidden");
+    document.getElementById("yesScreen").classList.remove("hidden");
     startHeartRain();
-
-    setTimeout(() => {
-        document.getElementById("main").classList.add("hidden");
-        document.getElementById("yesScreen").classList.remove("hidden");
-    }, 5000);
 });
 
 function startHeartRain() {
