@@ -8,6 +8,25 @@ noBtn.addEventListener("mouseover", () => {
 });
 
 yesBtn.addEventListener("click", () => {
-    document.getElementById("main").classList.add("hidden");
-    document.getElementById("yesScreen").classList.remove("hidden");
+    startHeartRain();
+
+    setTimeout(() => {
+        document.getElementById("main").classList.add("hidden");
+        document.getElementById("yesScreen").classList.remove("hidden");
+    }, 5000);
 });
+
+function startHeartRain() {
+    for (let i = 0; i < 40; i++) {
+        let heart = document.createElement("div");
+        heart.innerHTML = "💗";
+        heart.className = "heart";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+    }
+}
