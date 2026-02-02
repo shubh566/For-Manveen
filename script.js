@@ -1,3 +1,4 @@
+console.log("NEW SCRIPT LOADED");
 const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 
